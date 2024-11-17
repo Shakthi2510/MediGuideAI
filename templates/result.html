@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Advisor - Solution</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            animation: slideIn 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+            animation: bounceIn 0.9s ease-in;
+        }
+
+        .detail {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #555;
+            opacity: 0;
+            animation: fadeUp 1s forwards;
+        }
+
+        .detail strong {
+            display: block;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: inline-block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounceIn {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .detail {
+                font-size: 16px;
+            }
+
+            a {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Solution for "{{ symptom }}"</h1>
+        
+        <div class="detail" style="animation-delay: 0.3s;">
+            <strong>Recommended Solution:</strong>
+            <p>{{ solution }}</p>
+        </div>
+        
+        <div class="detail" style="animation-delay: 0.6s;">
+            <strong>Recommended Tablet & Reason:</strong>
+            <p>{{ tablet }}</p>
+        </div>
+        
+        <div class="detail" style="animation-delay: 0.9s;">
+            <strong>Recommended Tablet & Reason:</strong>
+            <p>{{ reason }}</p>
+        </div>
+        
+        <a href="/" style="animation-delay: 1.2s;">Search Again</a>
+    </div>
+</body>
+</html>
